@@ -1,0 +1,91 @@
+{
+  "theme": "Light",
+  "archetype": "4 (Swiss & High-Contrast with Vibrant Twist)",
+  "colors": {
+    "background_primary": "#FFFFFF",
+    "background_secondary": "#F8FAFC",
+    "primary_accent": "#4338CA",
+    "secondary_accent": "#FF5A5F",
+    "text_main": "#0F172A",
+    "text_muted": "#64748B",
+    "border": "#E2E8F0",
+    "success": "#10B981",
+    "warning": "#F59E0B",
+    "danger": "#EF4444",
+    "surface": "#FFFFFF"
+  },
+  "typography": {
+    "heading_font": "Outfit",
+    "body_font": "Manrope",
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl tracking-tight font-bold text-slate-900",
+      "h2": "text-2xl sm:text-3xl tracking-tight font-semibold text-slate-900",
+      "h3": "text-xl sm:text-2xl tracking-tight font-medium text-slate-900",
+      "body": "text-base leading-relaxed text-slate-600",
+      "small": "text-sm text-slate-500",
+      "label": "text-xs font-bold uppercase tracking-[0.2em] text-slate-500"
+    }
+  },
+  "spacing_and_layout": {
+    "container_padding": "p-6 md:p-8 lg:p-12",
+    "gap_standard": "gap-6",
+    "border_radius": "rounded-2xl",
+    "dashboard_grid": "grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6",
+    "surface_style": "bg-white border border-slate-200 shadow-sm"
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#4338CA] hover:bg-[#3730A3] text-white rounded-xl px-6 py-3 font-medium transition-all hover:-translate-y-0.5 shadow-sm hover:shadow",
+      "secondary": "bg-[#FF5A5F] hover:bg-[#E0484D] text-white rounded-xl px-6 py-3 font-medium transition-all hover:-translate-y-0.5 shadow-sm hover:shadow",
+      "outline": "border border-slate-200 hover:border-[#4338CA] text-slate-700 hover:text-[#4338CA] bg-white rounded-xl px-6 py-3 font-medium transition-all"
+    },
+    "cards": {
+      "default": "bg-white border border-slate-200 rounded-2xl p-6 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.1)]",
+      "interactive": "bg-white border border-slate-200 rounded-2xl p-6 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.1)] hover:border-[#4338CA] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all cursor-pointer duration-300"
+    },
+    "inputs": {
+      "default": "w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-[#4338CA]/20 focus:border-[#4338CA] outline-none transition-all text-slate-900 bg-slate-50/50 hover:bg-slate-50"
+    },
+    "header": "sticky top-0 z-50 backdrop-blur-xl bg-white/70 border-b border-slate-200/80 saturate-150"
+  },
+  "media": {
+    "images": [
+      {
+        "category": "login_hero_3d",
+        "url": "https://static.prod-images.emergentagent.com/jobs/8fcc6aa0-d3c0-4ee2-9d28-8273e4f4c56c/images/3efd182ab5d2c9fa942e30864690a3de4868f2c9b297ff625fa61998de12e074.png",
+        "description": "3D abstract composition of floating calendar pages and clock shapes in vivid coral orange and cobalt blue. MUST use for the split-screen image in the Login/Register flow."
+      },
+      {
+        "category": "provider_banner",
+        "url": "https://static.prod-images.emergentagent.com/jobs/8fcc6aa0-d3c0-4ee2-9d28-8273e4f4c56c/images/28e182a2e92c0b24cb4bf98e72df3dbd15a783c2d6ac600f873ee0c4f97f4e69.png",
+        "description": "Abstract vibrant geometric wave pattern. MUST use as the top banner background in the Provider Dashboard or Provider Public Profile."
+      },
+      {
+        "category": "office_workspace",
+        "url": "https://images.unsplash.com/photo-1763356844645-dbfd9244fa20?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwyfHx2aWJyYW50JTIwbW9kZXJuJTIwd29ya3NwYWNlJTIwb2ZmaWNlfGVufDB8fHx8MTc3ODI1ODQ3OHww&ixlib=rb-4.1.0&q=85",
+        "description": "Modern office space with orange wall and blue carpet. Use for fallback background or About/Contact sections if needed."
+      }
+    ]
+  },
+  "icons_library": "lucide-react",
+  "animation_guidelines": {
+    "hover_states": "All interactive elements must have a subtle transition (duration-200 ease-in-out).",
+    "page_transitions": "Fade-in with slight upward translation for main content blocks.",
+    "list_items": "Staggered fade-in for service catalog and time slots."
+  },
+  "accessibility": {
+    "contrast": "Ensure minimum 4.5:1 ratio for text on backgrounds.",
+    "focus": "All focusable elements must have focus:ring-2 focus:ring-[#4338CA]/20 focus:border-[#4338CA] focus:outline-none.",
+    "test_ids": "All interactive and key informational elements MUST include a `data-testid` attribute (e.g., data-testid='login-button')."
+  },
+  "instructions_to_main_agent": [
+    "Build the UI in React (.js files, NOT .tsx) using Tailwind CSS and Shadcn UI components.",
+    "Import 'Outfit' and 'Manrope' fonts from Google Fonts in index.html and apply them to Tailwind config.",
+    "Implement Authentication (Login/Register) as split-screens, placing the 'login_hero_3d' image on the non-form side. Allow switching between Customer and Provider roles.",
+    "Provider Dashboard: Use 'provider_banner' image as a rich header graphic. Include stats (today's appointments, revenue) and a schedule manager.",
+    "Customer Dashboard: Display upcoming appointments prominently. Include a service catalog grid (bento-style).",
+    "Booking Flow: Use Shadcn Calendar and customized selects for picking time slots.",
+    "Ensure heavily customized Shadcn components (Inputs, Cards, Buttons) to match the vivid, high-contrast, rounded-2xl styling.",
+    "Apply `data-testid` to all actionable elements and important UI nodes to support automated testing."
+  ]
+}
