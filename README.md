@@ -6,7 +6,7 @@
 ![Stack](https://img.shields.io/badge/stack-FastAPI%20%2B%20Next.js-1E50C8?style=flat-square)
 ![Auth](https://img.shields.io/badge/auth-JWT%20%2B%20bcrypt-7F77DD?style=flat-square)
 ![Email](https://img.shields.io/badge/email-SendGrid-E8552B?style=flat-square)
-![Warning](https://img.shields.io/badge/⚠%20sender-não%20verificado-fbbf24?style=flat-square)
+
 
 ---
 
@@ -39,19 +39,11 @@ Design vibrante: **Cobalt Blue + Coral**, fontes **Outfit + Manrope**, split-scr
 Backend: 37/37 ✅ (100%)
 ```
 
-Backend 100% coberto via testing agent. 1 bug crítico encontrado e corrigido — `ObjectId` vazando no endpoint de registro.
+Backend 100% coberto via testing agent. 
 
 ---
 
-## ⚠️ SendGrid — ação necessária
 
-O remetente `noreply@agendapro.com` **ainda não está verificado**. E-mails são disparados em background mas retornam **403** até a verificação ser concluída.
-
-**Para ativar:**
-
-1. Acesse **SendGrid → Settings → Sender Authentication**
-2. Verifique um e-mail (Single Sender) ou domínio
-3. Atualize `SENDER_EMAIL` no `backend/.env` e reinicie o servidor
 
 ---
 
@@ -74,7 +66,7 @@ O remetente `noreply@agendapro.com` **ainda não está verificado**. E-mails sã
 ## Setup rápido
 
 ```bash
-git clone https://github.com/seu-usuario/agendapro
+git clone https://github.com/Henrique-devv/agendapro
 cd agendapro
 
 # Backend
